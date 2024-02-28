@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>unknownLauncher</title>
+		<meta charset="UTF-8">
+		<link href="style.css" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+	</head>
+	<body id="page">
+		<div id="sidebar">
+			<h3 id="title">unknownLauncher</h3>
+			<p id="version">version $v</p>
+			<div id="btngroup">
+				<button onclick="homeButton()" type="button"><i class="fas fa-home" style="background-color:var(--btn-color)"></i> Home</button>
+				<button onclick="downloadButton()" type="button"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download</button>
+				<button onclick="faqButton()" type="button"><i class="fas fa-question" style="background-color:var(--btn-color)"></i> FAQ</button>
+				<button onclick="githubButton()" type="button"><i class="fab fa-github" style="background-color:var(--btn-color)"></i> GitHub</button>
+			</div>
+		</div>
+		<div id="content">
+			<h1 id="home-heading">About</h1>
+			<p id="home-paragraph">unknownLauncher is a launcher for Minecraft: Java Edition with separate installation support</p>
+			<div id="box">
+				<img src="example.png" alt="">
+				<img src="example-light.png" alt="">
+			</div>
+			<div id="platform-buttons" style="display:none;">
+				<input id="win" type="radio" name="a" checked>
+				<label for="win"><i class="fab fa-windows" style="background-color:var(--bg-color)"></i> Windows</label>
+				<input id="mac" type="radio" name="a">
+				<label for="mac"><i class="fab fa-apple" style="background-color:var(--bg-color)"></i> Mac OS</label>
+				<input id="linux" type="radio" name="a">
+				<label for="linux"><i class="fab fa-linux" style="background-color:var(--bg-color)"></i> Linux</label>
+				<section id="download-win">
+					<div id="download-btngroup">
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_windows_x64.exe'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Windows x64</button>
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_windows_x86.exe'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Windows x86</button>
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_windows_arm64.exe'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Windows arm64</button>
+					</div>
+				</section>
+				<section id="download-mac">
+					<div id="download-btngroup">
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_macos_amd64'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Mac OS amd64</button>
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_macos_arm64'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Mac OS arm64</button>
+					</div>
+				</section>
+				<section id="download-linux">
+					<div id="download-btngroup">
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_linux_amd64'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Linux amd64</button>
+						<button onclick="window.location.href='https://github.com/fdesc/unknownlauncher/releases/download/alpha-0.1/unknownlauncher_0.1-alpha_linux_i386'"><i class="fas fa-download" style="background-color:var(--btn-color)"></i> Download for Linux i386</button>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+	<script src="index.js"></script>
+</html>

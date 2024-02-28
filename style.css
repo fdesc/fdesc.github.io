@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+	scrollbar-color: #303030 transparent;
+	--bg-color: #181818;
+	--btn-color: #202020;
+	--btn-color-pressed: #242424;
+	--sidebar-color: #282828;
+	--font-color: #e0e2e0;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		scrollbar-color: #b3b3b3 transparent;
+		--bg-color: #c4c4c4;
+		--btn-color: #d4d4d4;
+		--btn-color-pressed: #b8b8b8;
+		--sidebar-color: #ebebeb;
+		--font-color: #181818;
+	}
+}
+
+* {
+	overflow: scrollbar;
+	font-family: DM Sans;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+}
+
+#sidebar {
+	background-color: var(--sidebar-color);
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+}
+
+#sidebar #title, #sidebar #version {
+	background-color: var(--sidebar-color);
+	text-align: center;
+}
+
+#btngroup {
+	margin-top: 10%;
+	background-color: var(--sidebar-color);
+}
+
+#sidebar #btngroup {
+	display: flex;
+	flex-direction: column;
+}
+
+#sidebar #btngroup button {
+	background-color: var(--btn-color);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3px;
+	width: 140px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 18px;
+	border: 0;
+	transition: 0.4s;
+}
+
+#sidebar #btngroup button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#sidebar #btngroup button:active {
+	background-color: var(--btn-color-pressed);
+}
+
+#content {
+	padding-left: 210px;
+	animation: fade 0.5s;
+}
+
+#download-btngroup {
+	display: flex;
+	flex-direction: column;
+}
+
+#download-btngroup button {
+	background-color: var(--btn-color);
+	margin-right: auto;
+	margin-top: 5px;
+	width: 75%;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 18px;
+	border: 0;
+	transition: 0.4s;
+}
+
+
+#download-btngroup button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#download-btngroup button:active {
+	background-color: var(--btn-color-pressed);
+}
+
+#box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+input {
+	border-bottom: 0;
+	display: none;
+}
+
+#win:checked ~ #download-win,
+#mac:checked ~ #download-mac,
+#linux:checked ~ #download-linux {
+	display: block;
+}
+
+input:checked + label {
+	border-bottom: 2px solid #4494f2;
+}
+
+section {
+	display: none;
+	border-top: 1px solid #222222;
+	width: 50%;
+	padding: 10px 0 0;
+}
+
+label {
+	display: inline-block;
+	padding: 8px 16px;
+	text-align: center;
+	border: 1px solid transparent;
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+img {
+	border-radius: 8px;
+	width: 95%;
+}
+
+
+@keyframes fade {
+	0% { opacity: 0.30; }
+	100% { opacity: 1; }
+}
